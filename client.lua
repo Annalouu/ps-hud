@@ -890,6 +890,8 @@ CreateThread(function()
                 end
             end
 
+            PlayerData = QBCore.Functions.GetPlayerData()
+            if PlayerData == nil then return end
             playerDead = IsEntityDead(player) or PlayerData.metadata["inlaststand"] or PlayerData.metadata["isdead"] or false
             parachute = GetPedParachuteState(player)
 
